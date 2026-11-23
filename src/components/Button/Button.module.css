@@ -1,0 +1,25 @@
+.button {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--gradient-action);
+  color: var(--color-white);
+}
+
+.secondary {
+  border: 2px solid var(--color-primary);
+  background: var(--color-white);
+  color: var(--color-text);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
