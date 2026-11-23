@@ -1,0 +1,42 @@
+/* Variables de design "Ocean Glow" : à utiliser partout avec var(--nom) */
+:root {
+  /* Couleurs */
+  --color-primary: #2f6bff;
+  --color-primary-soft: #e8efff; /* fond d'un élément sélectionné */
+  --color-secondary: #00d1c1;
+  --color-accent: #ffb800;
+  --color-bg: #f5f8ff;
+  --color-text: #0e1726;
+  --color-text-muted: #5b6676; /* texte secondaire */
+  --color-border: #7a869a;
+  --color-white: #ffffff;
+
+  /* Dégradés : "brand" est décoratif (jamais sous du texte),
+     "action" sert aux boutons avec texte blanc */
+  --gradient-brand: linear-gradient(135deg, #2f6bff, #00d1c1);
+  --gradient-action: linear-gradient(135deg, #2563eb, #0e7490);
+
+  /* Statuts */
+  --color-success: #067647;
+  --color-warning: #b54708;
+  --color-error: #d92d20;
+  --color-info: #0e7490;
+
+  /* Polices */
+  --font-title: 'Bricolage Grotesque', sans-serif;
+  --font-text: 'Inter', sans-serif;
+
+  /* Rayons */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* Espacements : --space-N = N × 4px */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+}

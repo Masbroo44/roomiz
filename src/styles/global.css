@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-text);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-title);
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Les champs et boutons n'héritent pas de la police par défaut */
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* Focus visible au clavier sur tous les éléments interactifs */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Mobile-first : l'app est une colonne centrée de 430px max */
+#root {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  min-height: 100dvh;
+  margin: 0 auto;
+}
+
+/* Chaque page est un <main> qui prend toute la hauteur disponible */
+main {
+  flex: 1;
+  padding: var(--space-6) var(--space-4);
+}
