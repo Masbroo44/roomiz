@@ -42,17 +42,25 @@ textarea {
   outline-offset: 2px;
 }
 
-/* Mobile-first : l'app est une colonne centrée de 430px max */
+/* Mobile-first : l'app est une colonne centrée de 430px max, sur toute la
+   hauteur de l'écran. Les env(safe-area-inset-...) laissent la place de
+   l'encoche (en haut) et de la barre d'accueil (en bas) des iPhone. */
 #root {
   display: flex;
   flex-direction: column;
   max-width: 430px;
   min-height: 100dvh;
   margin: 0 auto;
+  padding-top: env(safe-area-inset-top);
 }
 
 /* Chaque page est un <main> qui prend toute la hauteur disponible */
 main {
   flex: 1;
   padding: var(--space-6) var(--space-4);
+}
+
+/* Page sans TabBar en dessous : c'est elle qui laisse la place en bas */
+main:last-child {
+  padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom));
 }
