@@ -1,0 +1,34 @@
+.intro {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.label {
+  font-weight: 600;
+}
+
+.preview {
+  max-height: 260px;
+  object-fit: contain;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.pending {
+  color: var(--color-warning);
+}
+
+.verified {
+  color: var(--color-success);
+}
+
+.error {
+  color: var(--color-error);
+}
