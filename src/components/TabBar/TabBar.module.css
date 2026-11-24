@@ -1,0 +1,39 @@
+.tabBar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  /* Les onglets restent au-dessus de la barre d'accueil de l'iPhone */
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: 1px solid var(--color-primary-soft);
+  background: var(--color-white);
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) 0;
+  border-top: 3px solid transparent;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* NavLink ajoute aria-current="page" sur l'onglet de la page affichée */
+.tab[aria-current='page'] {
+  border-top-color: var(--color-primary);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.tab:focus-visible {
+  outline-offset: -3px; /* garde le contour à l'intérieur de la barre */
+}
