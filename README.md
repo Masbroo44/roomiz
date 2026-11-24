@@ -6,6 +6,16 @@ des personnes.
 Stack : Vite + React (JavaScript), React Router v6, CSS Modules, PWA
 (vite-plugin-pwa).
 
+## Documentation
+
+- [Choix techniques](docs/choix-techniques.md)
+- [Fonctionnalités](docs/fonctionnalites.md)
+- [API](docs/api.md)
+- [Architecture](docs/architecture.md)
+- [Répartition](docs/repartition.md)
+- [Git](docs/git.md)
+- [Charte UI](docs/charte-ui.md)
+
 ## Installation
 
 Il faut Node.js 20.19 ou plus récent.
