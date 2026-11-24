@@ -1,0 +1,40 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.question {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Réponse de l'autre personne, à gauche */
+.bubble {
+  align-self: flex-start;
+  max-width: 80%;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-primary-soft);
+  border-radius: var(--radius-md) var(--radius-md) var(--radius-md) 4px;
+  background: var(--color-white);
+  overflow-wrap: anywhere;
+}
+
+/* Ma réponse, à droite */
+.mine {
+  align-self: flex-end;
+  border-color: transparent;
+  border-radius: var(--radius-md) var(--radius-md) 4px var(--radius-md);
+  background: var(--gradient-action);
+  color: var(--color-white);
+}
+
+/* Pseudonyme au-dessus du texte */
+.author {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+}

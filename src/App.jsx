@@ -3,6 +3,7 @@ import TabBar from './components/TabBar/TabBar'
 import CreateProfile from './pages/CreateProfile/CreateProfile'
 import Explore from './pages/Explore/Explore'
 import Home from './pages/Home/Home'
+import KnockKnock from './pages/KnockKnock/KnockKnock'
 import Knocks from './pages/Knocks/Knocks'
 import Conversation from './pages/LivingRoom/Conversation'
 import LivingRoom from './pages/LivingRoom/LivingRoom'
@@ -26,6 +27,7 @@ const App = () => {
       <Route path="/create-profile" element={<CreateProfile />} />
       <Route path="/open-door" element={<OpenDoor />} />
       <Route path="/living-room/:id" element={<Conversation />} />
+      <Route path="/knock-knock/:id" element={<KnockKnock />} />
 
       {/* Les routes placées dans TabsLayout affichent la TabBar */}
       <Route element={<TabsLayout />}>
