@@ -4,6 +4,7 @@ import CreateProfile from './pages/CreateProfile/CreateProfile'
 import Explore from './pages/Explore/Explore'
 import Home from './pages/Home/Home'
 import Knocks from './pages/Knocks/Knocks'
+import ListingDetail from './pages/ListingDetail/ListingDetail'
 import LivingRoom from './pages/LivingRoom/LivingRoom'
 import MyRoom from './pages/MyRoom/MyRoom'
 
@@ -26,6 +27,7 @@ const App = () => {
       {/* Les routes placées dans TabsLayout affichent la TabBar */}
       <Route element={<TabsLayout />}>
         <Route path="/explore" element={<Explore />} />
+        <Route path="/listings/:id" element={<ListingDetail />} />
         <Route path="/knocks" element={<Knocks />} />
         <Route path="/living-room" element={<LivingRoom />} />
         <Route path="/my-room" element={<MyRoom />} />
