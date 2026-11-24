@@ -4,6 +4,7 @@ import CreateProfile from './pages/CreateProfile/CreateProfile'
 import Explore from './pages/Explore/Explore'
 import Home from './pages/Home/Home'
 import Knocks from './pages/Knocks/Knocks'
+import Conversation from './pages/LivingRoom/Conversation'
 import LivingRoom from './pages/LivingRoom/LivingRoom'
 import MyRoom from './pages/MyRoom/MyRoom'
 import OpenDoor from './pages/OpenDoor/OpenDoor'
@@ -24,6 +25,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/create-profile" element={<CreateProfile />} />
       <Route path="/open-door" element={<OpenDoor />} />
+      <Route path="/living-room/:id" element={<Conversation />} />
 
       {/* Les routes placées dans TabsLayout affichent la TabBar */}
       <Route element={<TabsLayout />}>
