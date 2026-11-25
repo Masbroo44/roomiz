@@ -1,0 +1,40 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.info {
+  color: var(--color-text-muted);
+}
+
+/* Message affiché si l'appel à l'API échoue */
+.error {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-error);
+  font-size: 0.875rem;
+}
+
+/* Lien vers Mes critères, présenté comme une ligne à toucher */
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Petite flèche à droite du lien */
+.link::after {
+  content: '›';
+  color: var(--color-text-muted);
+}
