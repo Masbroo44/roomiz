@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.name {
+  font-size: 1.25rem;
+}
+
+/* Étiquette "Je cherche" ou "J'ai une chambre" */
+.role {
+  align-self: flex-start;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.interests {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}

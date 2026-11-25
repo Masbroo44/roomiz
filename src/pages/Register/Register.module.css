@@ -1,0 +1,24 @@
+.intro {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.link {
+  margin-top: var(--space-6);
+  color: var(--color-text-muted);
+}
+
+.link a {
+  color: var(--color-primary);
+}

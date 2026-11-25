@@ -22,8 +22,7 @@ Il faut Node.js 20.19 ou plus récent.
 
 ```bash
 npm install
-cp .env.example .env   # URL de l'API (VITE_API_URL)
-npm run dev            # http://localhost:5173
+npm run dev   # http://localhost:5173
 ```
 
 ## Scripts
@@ -35,6 +34,20 @@ npm run dev            # http://localhost:5173
 | `npm run preview` | Sert le build pour le vérifier          |
 | `npm run lint`    | Vérifie le code avec ESLint             |
 | `npm run format`  | Met en forme tout le code avec Prettier |
+
+## Comptes de test
+
+Pas de back : les données sont en dur dans `src/data/`. Pour te connecter :
+
+| E-mail           | Mot de passe | Profil                                      |
+| ---------------- | ------------ | ------------------------------------------- |
+| `lea@roomiz.fr`  | `lea12345`   | Léa cherche une chambre                     |
+| `alex@roomiz.fr` | `alex1234`   | Alex partage une chambre, annonce publiée   |
+| `nina@roomiz.fr` | `nina1234`   | Nina partage une chambre, pas encore publié |
+
+- Pour changer de compte, ouvre `/login`.
+- Les changements restent en mémoire : recharger la page remet les données
+  d'exemple, et un compte créé par l'inscription disparaît.
 
 ## Tester sur téléphone (PWA)
 
@@ -50,21 +63,19 @@ npm run build && npm run preview -- --host
 3. Dans le menu du navigateur, choisis « Ajouter à l'écran d'accueil », puis
    lance Roomiz depuis son icône.
 
-À savoir :
-
-- En `http` sur le Wi-Fi, le service worker (cache des fichiers) ne s'active
-  pas : il lui faut `https` ou `localhost`. L'iPhone ouvre quand même l'app en
-  plein écran ; sur Android, l'installation complète demande `https`.
-- Sur le téléphone, `localhost` désigne le téléphone. Pour que l'API réponde,
-  mets l'adresse IP de ton ordinateur dans `VITE_API_URL` avant le build.
+À savoir : en `http` sur le Wi-Fi, le service worker (cache des fichiers) ne
+s'active pas : il lui faut `https` ou `localhost`. L'iPhone ouvre quand même
+l'app en plein écran ; sur Android, l'installation complète demande `https`.
 
 ## Arborescence
 
 ```
 src/
-  api/          client.js (fetch commun) + un fichier par ressource (profile.js)
+  api/          fonctions appelées par les pages : elles lisent et modifient
+                les données de data/
   components/   composants partagés : Button, Chip, Input, Toggle, TabBar
   context/      réservé à AuthContext
+  data/         données en dur : comptes, logements, knocks, discussions
   hooks/        hooks maison
   pages/        un dossier par écran : Home, CreateProfile, Explore, Knocks,
                 LivingRoom, MyRoom
@@ -105,7 +116,8 @@ La config de la PWA (manifest) est dans `vite.config.js`, ses icônes dans
 - Couleurs, rayons et espacements : toujours les variables de `tokens.css`.
 - Mobile d'abord : zones tactiles de 44px minimum, champs de saisie en 16px
   minimum (sinon iOS zoome au focus).
-- Les appels à l'API passent par `src/api/`, jamais de `fetch` dans un composant.
+- Les pages lisent et modifient les données avec les fonctions de `src/api/`,
+  jamais directement dans `src/data/`.
 - Pas de nouvelle dépendance sans en parler à l'équipe.
 
 **Pages**

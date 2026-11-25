@@ -7,6 +7,7 @@ src/
   components/
   pages/
   context/
+  data/
   hooks/
   styles/
   App.jsx
@@ -16,8 +17,11 @@ src/
 ## Rôle de chaque dossier
 
 - `public/` : fichiers servis tels quels (favicon, icônes de la PWA).
-- `src/api/` : appels à l'API. `client.js` fait le fetch, puis un fichier par
-  ressource (`profile.js`).
+- `src/api/` : fonctions appelées par les pages, un fichier par ressource
+  (`profile.js`). Pas de back : elles lisent et modifient les données de
+  `src/data/`.
+- `src/data/` : données en dur (comptes de test, logements, knocks,
+  discussions).
 - `src/components/` : composants partagés (Button, Chip, Input, Toggle, TabBar).
 - `src/pages/` : un dossier par écran, avec son CSS et ses sous-composants.
 - `src/context/` : réservé à `AuthContext`.
@@ -31,4 +35,5 @@ src/
 
 - Un dossier par page : chacun travaille dans le sien, peu de conflits Git.
 - Composants partagés au même endroit : même apparence sur tous les écrans.
-- Appels API isolés : si une route change, un seul fichier à corriger.
+- Données isolées dans `src/api/` : le jour où il y a un back, seul ce dossier
+  change, pas les pages.

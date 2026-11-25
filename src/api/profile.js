@@ -1,5 +1,10 @@
-import request from './client'
+import { getCurrentAccount } from './session'
+import wait from './wait'
 
-export const createProfile = (profile) => {
-  return request('/profiles', 'POST', profile)
+// Sans connexion, le profil va dans le compte visiteur jusqu'à l'inscription
+export const createProfile = async (profile) => {
+  await wait()
+  const account = getCurrentAccount()
+  account.profile = profile
+  return profile
 }
