@@ -1,0 +1,42 @@
+.intro {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.info {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+/* Phrase d'explication sous She Space */
+.hint {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+/* Message affiché si l'appel à l'API échoue */
+.error {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-error);
+  font-size: 0.875rem;
+}
+
+/* Message affiché quand les critères sont enregistrés */
+.success {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-success);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-success);
+  font-size: 0.875rem;
+}

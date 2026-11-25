@@ -6,6 +6,7 @@ import Home from './pages/Home/Home'
 import Knocks from './pages/Knocks/Knocks'
 import LivingRoom from './pages/LivingRoom/LivingRoom'
 import MyRoom from './pages/MyRoom/MyRoom'
+import Preferences from './pages/Preferences/Preferences'
 
 // Mise en page des 4 onglets : la page (Outlet) puis la TabBar en bas
 const TabsLayout = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/knocks" element={<Knocks />} />
         <Route path="/living-room" element={<LivingRoom />} />
         <Route path="/my-room" element={<MyRoom />} />
+        <Route path="/preferences" element={<Preferences />} />
       </Route>
 
       {/* Adresse inconnue : retour à l'accueil */}
