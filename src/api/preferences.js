@@ -1,34 +1,38 @@
-import request from './client'
+import { getCurrentAccount } from './session'
+import wait from './wait'
 
-// Fait un GET et renvoie null si la ressource n'existe pas encore (erreur 404)
-const getOrNull = async (path) => {
-  try {
-    return await request(path)
-  } catch (error) {
-    if (error.message === 'Erreur API 404') {
-      return null
-    }
-    throw error
-  }
+// Critères du compte connecté (null = aucun critère enregistré)
+export const getPreferences = async () => {
+  await wait()
+  return getCurrentAccount().preferences
 }
 
-export const getPreferences = () => {
-  return getOrNull('/preferences')
+export const updatePreferences = async (preferences) => {
+  await wait()
+  const account = getCurrentAccount()
+  account.preferences = preferences
+  return preferences
 }
 
-export const updatePreferences = (preferences) => {
-  return request('/preferences', 'PUT', preferences)
+// Annonce du compte connecté (null = pas encore d'annonce)
+export const getMyListing = async () => {
+  await wait()
+  return getCurrentAccount().listing
 }
 
-export const getMyListing = () => {
-  return getOrNull('/me/listing')
-}
-
-export const updateMyListing = (listing) => {
-  return request('/me/listing', 'PUT', listing)
+export const updateMyListing = async (listing) => {
+  await wait()
+  const account = getCurrentAccount()
+  account.listing = listing
+  return listing
 }
 
 // Mon profil (celui de l'écran "Créer mon profil"), affiché dans My Room
-export const getMyProfile = () => {
-  return request('/me/profile')
+export const getMyProfile = async () => {
+  await wait()
+  const account = getCurrentAccount()
+  if (!account.profile) {
+    throw new Error('Profil introuvable')
+  }
+  return account.profile
 }
