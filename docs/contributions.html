@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contributions - Roomiz</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #222;
+    background: #ffffff;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #d6481f;
+  }
+  h2 {
+    font-size: 19px;
+    margin-top: 40px;
+    border-bottom: 2px solid #ffd7b3;
+    padding-bottom: 6px;
+    color: #d6481f;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid #c9e8d4;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #1f7a4d;
+    color: #ffffff;
+  }
+  tr:nth-child(even) td {
+    background: #f1faf4;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  strong {
+    color: #d6481f;
+  }
+</style>
+</head>
+<body>
+
+<h1>Récapitulatif des contributions</h1>
+
+<h2>Récap technique</h2>
+
+<table>
+  <tr>
+    <th>Membre</th>
+    <th>Branche</th>
+    <th>Ce qu'il/elle a fait</th>
+  </tr>
+  <tr>
+    <td>Samuel</td>
+    <td>feature/setup, feature/onboarding</td>
+    <td>
+      A posé toute la base du projet : installation de Vite + React, configuration ESLint/Prettier,
+      configuration de la PWA (manifest, icônes, affichage plein écran sur mobile), les variables
+      de la charte graphique (couleurs, polices, espacements) et les styles globaux, les composants
+      partagés utilisés par tout le monde (Button, Chip, Input, Toggle, TabBar), le client API
+      commun (<code>client.js</code>) qui gère les appels fetch et le token, le routing général
+      de l'app, les pages Accueil et Créer mon profil, et toute la documentation technique du
+      projet (<code>docs/</code>).
+    </td>
+  </tr>
+  <tr>
+    <td>Paulo</td>
+    <td>feature/auth</td>
+    <td>
+      S'est occupé de la partie connexion : les écrans Connexion et Inscription, le contexte
+      d'authentification (AuthContext) qui garde l'utilisateur connecté dans l'app, les routes
+      protégées pour empêcher d'accéder aux pages sans être connecté, et l'écran Vérifier mon
+      identité qui donne le badge Verified Key.
+    </td>
+  </tr>
+  <tr>
+    <td>Lina</td>
+    <td>feature/explore</td>
+    <td>
+      A développé la partie swipe de l'app : les appels API pour récupérer les logements et
+      envoyer un Toquer, la carte de logement avec un swipe fait à la main (événements pointer,
+      sans librairie externe), la page Explore avec ses états de chargement, d'erreur et de fin
+      de liste, et la fiche annonce avec les photos, le loyer, les badges et le bouton Toquer.
+    </td>
+  </tr>
+  <tr>
+    <td>Sloan</td>
+    <td>feature/my-room</td>
+    <td>
+      En charge de la page Mes critères (avec l'option She Space), de la page My Room qui montre
+      le profil et l'annonce de l'utilisateur, et du formulaire de création d'annonce.
+    </td>
+  </tr>
+  <tr>
+    <td>Faetem</td>
+    <td>feature/knocks</td>
+    <td>
+      En charge de la page Knocks qui liste les logements où on a toqué, de l'écran Porte ouverte
+      affiché quand il y a un match, de la Living Room pour la messagerie, et du Knock Knock, le
+      chat anonyme guidé.
+    </td>
+  </tr>
+</table>
+
+<h2>Travail d'équipe</h2>
+
+<ul>
+  <li><strong>Répartition claire dès le départ :</strong> on a listé les écrans de l'app ensemble, puis
+    chacun a choisi sa partie. Chaque personne garde un dossier dans <code>pages/</code> et un fichier
+    dans <code>api/</code>, pour pouvoir avancer en même temps sans se marcher dessus.</li>
+  <li><strong>Décisions prises en groupe :</strong> avant de coder, on s'est mis d'accord ensemble sur
+    une charte UI commune (couleurs, polices, rayons, vocabulaire de l'app comme "Toquer" ou "Vibe
+    Check") pour que toutes les pages se ressemblent même en travaillant chacun de son côté.</li>
+  <li><strong>Organisation Git discutée ensemble :</strong> une branche par personne créée depuis
+    <code>develop</code>, des petits commits clairs en français, et une Pull Request relue par un
+    autre membre avant d'intégrer le code dans <code>develop</code>.</li>
+  <li><strong>Un seul responsable des composants partagés :</strong> pour éviter les conflits et garder
+    une app cohérente, seul Samuel modifie <code>components/</code>. Les autres lui demandent avant de
+    changer quelque chose là-dedans, au lieu de le faire chacun dans son coin.</li>
+  <li><strong>Communication régulière :</strong> on s'est tenus au courant de l'avancée de chacun pour
+    éviter les blocages, par exemple si quelqu'un a besoin d'un composant qui n'existe pas encore.</li>
+  <li><strong>Entraide sur le code :</strong> chacun relit ce que les autres ont déjà fait avant de
+    commencer sa propre partie, pour garder le même style de code partout dans le projet.</li>
+</ul>
+
+</body>
+</html>
