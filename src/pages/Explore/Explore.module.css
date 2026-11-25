@@ -1,0 +1,15 @@
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.empty {
+  color: var(--color-text-muted);
+  text-align: center;
+}
