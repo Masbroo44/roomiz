@@ -37,3 +37,26 @@ src/
 - Composants partagés au même endroit : même apparence sur tous les écrans.
 - Données isolées dans `src/api/` : le jour où il y a un back, seul ce dossier
   change, pas les pages.
+
+## Lancer le projet
+
+Il faut Node.js 20.19 ou plus récent.
+
+```bash
+npm install
+npm run dev   # http://localhost:5173
+```
+
+## Comptes de test
+
+Pas de back : les données sont en dur dans `src/data/`. Pour te connecter :
+
+| E-mail           | Mot de passe | Profil                                      |
+| ---------------- | ------------ | ------------------------------------------- |
+| `lea@roomiz.fr`  | `lea12345`   | Léa cherche une chambre                     |
+| `alex@roomiz.fr` | `alex1234`   | Alex partage une chambre, annonce publiée   |
+| `nina@roomiz.fr` | `nina1234`   | Nina partage une chambre, pas encore publié |
+
+- Pour changer de compte, ouvre `/login`.
+- Les changements restent en mémoire : recharger la page remet les données
+  d'exemple, et un compte créé par l'inscription disparaît.
