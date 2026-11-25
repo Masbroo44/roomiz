@@ -5,11 +5,14 @@ import ProtectedRoute from './context/ProtectedRoute'
 import CreateProfile from './pages/CreateProfile/CreateProfile'
 import Explore from './pages/Explore/Explore'
 import Home from './pages/Home/Home'
+import KnockKnock from './pages/KnockKnock/KnockKnock'
 import Knocks from './pages/Knocks/Knocks'
 import ListingDetail from './pages/ListingDetail/ListingDetail'
+import Conversation from './pages/LivingRoom/Conversation'
 import LivingRoom from './pages/LivingRoom/LivingRoom'
 import Login from './pages/Login/Login'
 import MyRoom from './pages/MyRoom/MyRoom'
+import OpenDoor from './pages/OpenDoor/OpenDoor'
 import Register from './pages/Register/Register'
 import VerifyIdentity from './pages/VerifyIdentity/VerifyIdentity'
 
@@ -39,6 +42,9 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="/open-door" element={<OpenDoor />} />
+        <Route path="/living-room/:id" element={<Conversation />} />
+        <Route path="/knock-knock/:id" element={<KnockKnock />} />
 
         {/* Les routes placées dans TabsLayout affichent la TabBar */}
         <Route

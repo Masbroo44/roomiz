@@ -1,0 +1,28 @@
+.knockKnock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Lien de retour, assez grand pour le doigt */
+.back {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.info {
+  color: var(--color-text-muted);
+}
+
+.error {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-error);
+  font-size: 0.875rem;
+}
