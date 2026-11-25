@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.title {
+  font-size: 1.25rem;
+}
+
+.info {
+  color: var(--color-text-muted);
+}
+
+.error {
+  color: var(--color-error);
+  font-size: 0.875rem;
+}

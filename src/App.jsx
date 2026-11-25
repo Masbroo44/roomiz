@@ -11,8 +11,10 @@ import ListingDetail from './pages/ListingDetail/ListingDetail'
 import Conversation from './pages/LivingRoom/Conversation'
 import LivingRoom from './pages/LivingRoom/LivingRoom'
 import Login from './pages/Login/Login'
+import MyListing from './pages/MyListing/MyListing'
 import MyRoom from './pages/MyRoom/MyRoom'
 import OpenDoor from './pages/OpenDoor/OpenDoor'
+import Preferences from './pages/Preferences/Preferences'
 import Register from './pages/Register/Register'
 import VerifyIdentity from './pages/VerifyIdentity/VerifyIdentity'
 
@@ -59,6 +61,8 @@ const App = () => {
           <Route path="/knocks" element={<Knocks />} />
           <Route path="/living-room" element={<LivingRoom />} />
           <Route path="/my-room" element={<MyRoom />} />
+          <Route path="/my-room/listing" element={<MyListing />} />
+          <Route path="/preferences" element={<Preferences />} />
         </Route>
 
         {/* Adresse inconnue : retour à l'accueil */}

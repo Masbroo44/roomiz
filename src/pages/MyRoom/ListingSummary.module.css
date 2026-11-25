@@ -1,0 +1,23 @@
+.photo {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.neighborhood {
+  color: var(--color-text-muted);
+}
+
+.badge {
+  align-self: flex-start;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
